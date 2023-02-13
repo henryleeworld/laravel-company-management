@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryCompanyPivotTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -15,4 +15,4 @@ class CreateCategoryCompanyPivotTable extends Migration
             $table->foreign('category_id', 'category_id_fk_2220843')->references('id')->on('categories')->onDelete('cascade');
         });
     }
-}
+};

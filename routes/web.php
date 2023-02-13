@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::redirect('/', '/login');
 Route::redirect('/dashboard', '/admin/dashboard');
 
@@ -21,9 +20,8 @@ Auth::routes(['register' => false]);
 Route::group([
     'prefix'     => 'admin',
     'as'         => 'admin.',
-    'namespace'  => 'Admin',
+    'namespace'  => 'App\Http\Controllers\Admin',
     'middleware' => ['auth'],
 ], function () {
     Route::view('/{any?}', 'layouts.admin.app')->name('dashboard')->where('any', '.*');
 });
-
