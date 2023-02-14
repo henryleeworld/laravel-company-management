@@ -8,4 +8,10 @@ return [
     'moment_time_format'     => 'HH:mm:ss',
     'moment_datetime_format' => 'YYYY-MM-DD HH:mm:ss',
     'default_language'       => 'zh_TW',
+    'supported_languages'    => [
+        [
+            'title'      => 'Chinese',
+            'short_code' => 'zh_TW',
+        ],
+    ],
 ];

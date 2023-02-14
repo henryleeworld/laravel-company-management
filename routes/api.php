@@ -17,6 +17,10 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'App\Http\Control
     // Abilities
     Route::apiResource('abilities', AbilitiesController::class, ['only' => ['index']]);
 
+    // Locales
+    Route::get('locales/languages', 'LocalesController@languages')->name('locales.languages');
+    Route::get('locales/messages', 'LocalesController@messages')->name('locales.messages');
+
     // Permissions
     Route::resource('permissions', PermissionsApiController::class);
 

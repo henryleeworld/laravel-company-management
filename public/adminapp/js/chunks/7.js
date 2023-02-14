@@ -26,11 +26,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _components_Datatables_DatatableActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @components/Datatables/DatatableActions */ "./resources/adminapp/js/components/Datatables/DatatableActions.vue");
-/* harmony import */ var _components_Datatables_DatatableSingle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/Datatables/DatatableSingle */ "./resources/adminapp/js/components/Datatables/DatatableSingle.vue");
-/* harmony import */ var _components_Datatables_DatatableList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @components/Datatables/DatatableList */ "./resources/adminapp/js/components/Datatables/DatatableList.vue");
-/* harmony import */ var _components_Datatables_DatatableCheckbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @components/Datatables/DatatableCheckbox */ "./resources/adminapp/js/components/Datatables/DatatableCheckbox.vue");
-/* harmony import */ var _components_Datatables_DatatableEnum__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @components/Datatables/DatatableEnum */ "./resources/adminapp/js/components/Datatables/DatatableEnum.vue");
-/* harmony import */ var _components_Datatables_DatatablePictures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @components/Datatables/DatatablePictures */ "./resources/adminapp/js/components/Datatables/DatatablePictures.vue");
+/* harmony import */ var _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/Datatables/TranslatedHeader */ "./resources/adminapp/js/components/Datatables/TranslatedHeader.vue");
+/* harmony import */ var _components_Datatables_HeaderSettings__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @components/Datatables/HeaderSettings */ "./resources/adminapp/js/components/Datatables/HeaderSettings.vue");
+/* harmony import */ var _components_Datatables_DatatableSingle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @components/Datatables/DatatableSingle */ "./resources/adminapp/js/components/Datatables/DatatableSingle.vue");
+/* harmony import */ var _components_Datatables_DatatableList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @components/Datatables/DatatableList */ "./resources/adminapp/js/components/Datatables/DatatableList.vue");
+/* harmony import */ var _components_Datatables_DatatableCheckbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @components/Datatables/DatatableCheckbox */ "./resources/adminapp/js/components/Datatables/DatatableCheckbox.vue");
+/* harmony import */ var _components_Datatables_DatatableEnum__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @components/Datatables/DatatableEnum */ "./resources/adminapp/js/components/Datatables/DatatableEnum.vue");
+/* harmony import */ var _components_Datatables_DatatablePictures__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @components/Datatables/DatatablePictures */ "./resources/adminapp/js/components/Datatables/DatatablePictures.vue");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -44,32 +46,43 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    HeaderSettings: _components_Datatables_HeaderSettings__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
   data: function data() {
     return {
       columns: [{
-        title: 'ID',
+        title: 'cruds.company.fields.id',
         field: 'id',
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
         sortable: true,
         colStyle: 'width: 50px;'
       }, {
-        title: 'Name',
+        title: 'cruds.company.fields.name',
         field: 'name',
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
         sortable: true
       }, {
-        title: 'City',
+        title: 'cruds.company.fields.city',
         field: 'city.name',
-        tdComp: _components_Datatables_DatatableSingle__WEBPACK_IMPORTED_MODULE_2__["default"]
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
+        tdComp: _components_Datatables_DatatableSingle__WEBPACK_IMPORTED_MODULE_4__["default"]
       }, {
-        title: 'Categories',
+        title: 'cruds.company.fields.categories',
         field: 'categories.name',
-        tdComp: _components_Datatables_DatatableList__WEBPACK_IMPORTED_MODULE_3__["default"]
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
+        tdComp: _components_Datatables_DatatableList__WEBPACK_IMPORTED_MODULE_5__["default"]
       }, {
-        title: 'Logo',
+        title: 'cruds.company.fields.logo',
         field: 'logo',
-        tdComp: _components_Datatables_DatatablePictures__WEBPACK_IMPORTED_MODULE_6__["default"]
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
+        tdComp: _components_Datatables_DatatablePictures__WEBPACK_IMPORTED_MODULE_8__["default"]
       }, {
-        title: 'Actions',
+        title: 'global.actions',
+        thComp: _components_Datatables_TranslatedHeader__WEBPACK_IMPORTED_MODULE_2__["default"],
         tdComp: _components_Datatables_DatatableActions__WEBPACK_IMPORTED_MODULE_1__["default"],
         visible: true,
         thClass: 'text-right',
@@ -168,7 +181,11 @@ var render = function render() {
     staticClass: "col-md-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header card-header-primary card-header-icon"
+  }, [_vm._m(0), _vm._v(" "), _c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v("\n            " + _vm._s(_vm.$t("global.table")) + "\n            "), _c("strong", [_vm._v(_vm._s(_vm.$t("cruds.company.title")))])])]), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_vm.$can(_vm.xprops.permission_prefix + "create") ? _c("router-link", {
     staticClass: "btn btn-primary",
@@ -179,7 +196,7 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("\n              add\n            ")]), _vm._v("\n            Add new\n          ")]) : _vm._e(), _vm._v(" "), _c("button", {
+  }, [_vm._v("\n              add\n            ")]), _vm._v("\n            " + _vm._s(_vm.$t("global.add")) + "\n          ")]) : _vm._e(), _vm._v(" "), _c("button", {
     staticClass: "btn btn-default",
     "class": {
       disabled: _vm.loading
@@ -196,7 +213,7 @@ var render = function render() {
     "class": {
       "fa-spin": _vm.loading
     }
-  }, [_vm._v("\n              refresh\n            ")]), _vm._v("\n            Refresh\n          ")])], 1), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n              refresh\n            ")]), _vm._v("\n            " + _vm._s(_vm.$t("global.refresh")) + "\n          ")])], 1), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_c("div", {
     staticClass: "row"
@@ -220,22 +237,24 @@ var render = function render() {
       total: _vm.total,
       query: _vm.query,
       xprops: _vm.xprops,
+      HeaderSettings: false,
       pageSizeOptions: [10, 25, 50, 100]
     }
-  })], 1)])])])])])]);
+  }, [_c("header-settings", {
+    staticClass: "pull-right",
+    attrs: {
+      columns: _vm.columns
+    }
+  })], 1)], 1)])])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "card-header card-header-primary card-header-icon"
-  }, [_c("div", {
     staticClass: "card-icon"
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("assignment")])]), _vm._v(" "), _c("h4", {
-    staticClass: "card-title"
-  }, [_vm._v("Companies Table")])]);
+  }, [_vm._v("assignment")])]);
 }];
 render._withStripped = true;
 

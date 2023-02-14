@@ -26,7 +26,7 @@ export default {
       this.$jquery.notify(
         {
           icon: 'check',
-          message: 'Your item has been successfully saved.'
+          message: this.$i18n.t('global.create_success')
         },
         this.notificationSettings
       )
@@ -35,7 +35,7 @@ export default {
       this.$jquery.notify(
         {
           icon: 'check',
-          message: 'Your item has been successfully updated.'
+          message: this.$i18n.t('global.update_success')
         },
         this.notificationSettings
       )
@@ -44,7 +44,7 @@ export default {
       this.$jquery.notify(
         {
           icon: 'check',
-          message: 'Your item has been successfully deleted.'
+          message: this.$i18n.t('global.delete_success')
         },
         this.notificationSettings
       )

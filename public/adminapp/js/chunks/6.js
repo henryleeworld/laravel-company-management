@@ -119,7 +119,11 @@ var render = function render() {
     staticClass: "col-md-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header card-header-primary card-header-icon"
+  }, [_vm._m(0), _vm._v(" "), _c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v("\n            " + _vm._s(_vm.$t("global.view")) + "\n            "), _c("strong", [_vm._v(_vm._s(_vm.$t("cruds.user.title_singular")))])])]), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_c("back-button")], 1), _vm._v(" "), _c("div", {
     staticClass: "card-body"
@@ -133,13 +137,13 @@ var render = function render() {
     staticClass: "table"
   }, [_c("tbody", [_c("tr", [_c("td", {
     staticClass: "text-primary"
-  }, [_vm._v("\n                        Name\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.name) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
+  }, [_vm._v("\n                        " + _vm._s(_vm.$t("cruds.user.fields.name")) + "\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.name) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
     staticClass: "text-primary"
-  }, [_vm._v("\n                        Email\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.email) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
+  }, [_vm._v("\n                        " + _vm._s(_vm.$t("cruds.user.fields.email")) + "\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.email) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
     staticClass: "text-primary"
-  }, [_vm._v("\n                        Email verified at\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.email_verified_at) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
+  }, [_vm._v("\n                        " + _vm._s(_vm.$t("cruds.user.fields.email_verified_at")) + "\n                      ")]), _vm._v(" "), _c("td", [_vm._v("\n                        " + _vm._s(_vm.entry.email_verified_at) + "\n                      ")])]), _vm._v(" "), _c("tr", [_c("td", {
     staticClass: "text-primary"
-  }, [_vm._v("\n                        Roles\n                      ")]), _vm._v(" "), _c("td", [_c("datatable-list", {
+  }, [_vm._v("\n                        " + _vm._s(_vm.$t("cruds.user.fields.roles")) + "\n                      ")]), _vm._v(" "), _c("td", [_c("datatable-list", {
     attrs: {
       row: _vm.entry,
       field: "roles.title"
@@ -150,14 +154,10 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "card-header card-header-primary card-header-icon"
-  }, [_c("div", {
     staticClass: "card-icon"
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("remove_red_eye")])]), _vm._v(" "), _c("h4", {
-    staticClass: "card-title"
-  }, [_vm._v("View User")])]);
+  }, [_vm._v("remove_red_eye")])]);
 }];
 render._withStripped = true;
 

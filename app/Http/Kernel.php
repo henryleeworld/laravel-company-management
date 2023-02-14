@@ -37,7 +37,6 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\AuthGates::class,
-            \App\Http\Middleware\SetLocale::class,
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
         ],
 
@@ -46,6 +45,7 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\AuthGates::class,
+            \App\Http\Middleware\SetPreferredLocale::class,
         ],
     ];
 

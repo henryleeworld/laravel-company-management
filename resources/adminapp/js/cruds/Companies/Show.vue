@@ -7,7 +7,10 @@
             <div class="card-icon">
               <i class="material-icons">remove_red_eye</i>
             </div>
-            <h4 class="card-title">View Company</h4>
+            <h4 class="card-title">
+              {{ $t('global.view') }}
+              <strong>{{ $t('cruds.company.title_singular') }}</strong>
+            </h4>
           </div>
           <div class="card-body">
             <back-button></back-button>
@@ -20,7 +23,7 @@
                     <tbody>
                       <tr>
                         <td class="text-primary">
-                          Name
+                          {{ $t('cruds.company.fields.name') }}
                         </td>
                         <td>
                           {{ entry.name }}
@@ -28,7 +31,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Description
+                          {{ $t('cruds.company.fields.description') }}
                         </td>
                         <td>
                           {{ entry.description }}
@@ -36,7 +39,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          City
+                          {{ $t('cruds.company.fields.city') }}
                         </td>
                         <td>
                           <datatable-single :row="entry" field="city.name">
@@ -45,7 +48,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Categories
+                          {{ $t('cruds.company.fields.categories') }}
                         </td>
                         <td>
                           <datatable-list :row="entry" field="categories.name">
@@ -54,7 +57,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Logo
+                          {{ $t('cruds.company.fields.logo') }}
                         </td>
                         <td>
                           <datatable-pictures :row="entry" :field="'logo'">

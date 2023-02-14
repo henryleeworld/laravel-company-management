@@ -7,7 +7,7 @@
   >
     <div class="logo">
       <a href="/" class="simple-text logo-normal">
-        {{ title }}
+        {{ $t(title) }}
       </a>
     </div>
     <div class="sidebar-wrapper">
@@ -31,7 +31,7 @@
         <li class="nav-item">
           <a href="#" class="nav-link" @click.prevent="logout">
             <i class="material-icons">power_settings_new</i>
-            <p>Logout</p>
+            <p>{{ $t('global.logout') }}</p>
           </a>
         </li>
       </ul>
@@ -45,7 +45,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Company Management'
+      default: 'panel.site_title'
     },
     backgroundImage: {
       type: String,

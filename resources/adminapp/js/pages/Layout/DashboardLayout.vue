@@ -29,30 +29,30 @@ export default {
     return {
       sidebarLinks: [
         {
-          title: 'Dashboard',
+          title: 'global.dashboard',
           icon: 'dashboard',
           path: { name: 'dashboard' }
         },
         {
-          title: 'User Management',
+          title: 'cruds.userManagement.title',
           icon: 'person',
           path: { name: 'user_management' },
           gate: 'user_management_access',
           children: [
             {
-              title: 'Permissions',
+              title: 'cruds.permission.title',
               icon: 'perm_data_setting',
               path: { name: 'permissions.index' },
               gate: 'permission_access'
             },
             {
-              title: 'Roles',
+              title: 'cruds.role.title',
               icon: 'group',
               path: { name: 'roles.index' },
               gate: 'role_access'
             },
             {
-              title: 'Users',
+              title: 'cruds.user.title',
               icon: 'person',
               path: { name: 'users.index' },
               gate: 'user_access'
@@ -60,19 +60,19 @@ export default {
           ]
         },
         {
-          title: 'Cities',
+          title: 'cruds.city.title',
           icon: 'table_view',
           path: { name: 'cities.index' },
           gate: 'city_access'
         },
         {
-          title: 'Categories',
+          title: 'cruds.category.title',
           icon: 'table_view',
           path: { name: 'categories.index' },
           gate: 'category_access'
         },
         {
-          title: 'Companies',
+          title: 'cruds.company.title',
           icon: 'table_view',
           path: { name: 'companies.index' },
           gate: 'company_access'

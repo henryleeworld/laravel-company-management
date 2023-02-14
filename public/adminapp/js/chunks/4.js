@@ -37,34 +37,34 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       sidebarLinks: [{
-        title: 'Dashboard',
+        title: 'global.dashboard',
         icon: 'dashboard',
         path: {
           name: 'dashboard'
         }
       }, {
-        title: 'User Management',
+        title: 'cruds.userManagement.title',
         icon: 'person',
         path: {
           name: 'user_management'
         },
         gate: 'user_management_access',
         children: [{
-          title: 'Permissions',
+          title: 'cruds.permission.title',
           icon: 'perm_data_setting',
           path: {
             name: 'permissions.index'
           },
           gate: 'permission_access'
         }, {
-          title: 'Roles',
+          title: 'cruds.role.title',
           icon: 'group',
           path: {
             name: 'roles.index'
           },
           gate: 'role_access'
         }, {
-          title: 'Users',
+          title: 'cruds.user.title',
           icon: 'person',
           path: {
             name: 'users.index'
@@ -72,21 +72,21 @@ __webpack_require__.r(__webpack_exports__);
           gate: 'user_access'
         }]
       }, {
-        title: 'Cities',
+        title: 'cruds.city.title',
         icon: 'table_view',
         path: {
           name: 'cities.index'
         },
         gate: 'city_access'
       }, {
-        title: 'Categories',
+        title: 'cruds.category.title',
         icon: 'table_view',
         path: {
           name: 'categories.index'
         },
         gate: 'category_access'
       }, {
-        title: 'Companies',
+        title: 'cruds.company.title',
         icon: 'table_view',
         path: {
           name: 'companies.index'
@@ -246,7 +246,7 @@ var render = function render() {
     staticClass: "navbar-wrapper"
   }, [_c("div", {
     staticClass: "navbar-brand"
-  }, [_vm._v("\n        " + _vm._s(_vm.$route.meta.title) + "\n      ")])]), _vm._v(" "), _c("button", {
+  }, [_vm._v("\n        " + _vm._s(_vm.$t(_vm.$route.meta.title)) + "\n      ")])]), _vm._v(" "), _c("button", {
     staticClass: "navbar-toggler",
     "class": {
       toggled: _vm.$sidebar.showSidebar
@@ -269,7 +269,11 @@ var render = function render() {
     staticClass: "navbar-toggler-icon icon-bar"
   }), _vm._v(" "), _c("span", {
     staticClass: "navbar-toggler-icon icon-bar"
-  })])])]);
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "collapse navbar-collapse justify-content-end"
+  }, [_c("ul", {
+    staticClass: "navbar-nav"
+  }, [_c("top-navbar-languages")], 1)])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

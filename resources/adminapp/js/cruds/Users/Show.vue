@@ -7,7 +7,10 @@
             <div class="card-icon">
               <i class="material-icons">remove_red_eye</i>
             </div>
-            <h4 class="card-title">View User</h4>
+            <h4 class="card-title">
+              {{ $t('global.view') }}
+              <strong>{{ $t('cruds.user.title_singular') }}</strong>
+            </h4>
           </div>
           <div class="card-body">
             <back-button></back-button>
@@ -20,7 +23,7 @@
                     <tbody>
                       <tr>
                         <td class="text-primary">
-                          Name
+                          {{ $t('cruds.user.fields.name') }}
                         </td>
                         <td>
                           {{ entry.name }}
@@ -28,7 +31,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Email
+                          {{ $t('cruds.user.fields.email') }}
                         </td>
                         <td>
                           {{ entry.email }}
@@ -36,7 +39,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Email verified at
+                          {{ $t('cruds.user.fields.email_verified_at') }}
                         </td>
                         <td>
                           {{ entry.email_verified_at }}
@@ -44,7 +47,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Roles
+                          {{ $t('cruds.user.fields.roles') }}
                         </td>
                         <td>
                           <datatable-list :row="entry" field="roles.title">

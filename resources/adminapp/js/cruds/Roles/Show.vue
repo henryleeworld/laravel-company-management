@@ -7,7 +7,10 @@
             <div class="card-icon">
               <i class="material-icons">remove_red_eye</i>
             </div>
-            <h4 class="card-title">View Role</h4>
+            <h4 class="card-title">
+              {{ $t('global.view') }}
+              <strong>{{ $t('cruds.role.title_singular') }}</strong>
+            </h4>
           </div>
           <div class="card-body">
             <back-button></back-button>
@@ -20,7 +23,7 @@
                     <tbody>
                       <tr>
                         <td class="text-primary">
-                          Title
+                          {{ $t('cruds.role.fields.title') }}
                         </td>
                         <td>
                           {{ entry.title }}
@@ -28,7 +31,7 @@
                       </tr>
                       <tr>
                         <td class="text-primary">
-                          Permissions
+                          {{ $t('cruds.role.fields.permissions') }}
                         </td>
                         <td>
                           <datatable-list

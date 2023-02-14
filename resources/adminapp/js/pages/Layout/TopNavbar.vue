@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="navbar-wrapper">
         <div class="navbar-brand">
-          {{ $route.meta.title }}
+          {{ $t($route.meta.title) }}
         </div>
       </div>
       <button
@@ -23,6 +23,11 @@
         <span class="navbar-toggler-icon icon-bar"></span>
         <span class="navbar-toggler-icon icon-bar"></span>
       </button>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <top-navbar-languages />
+        </ul>
+      </div>
     </div>
   </nav>
 </template>

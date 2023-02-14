@@ -9,14 +9,14 @@
         <template v-if="text">
           <span class="sidebar-mini">{{ textIcon }}</span>
           <span class="sidebar-normal">
-            {{ item.title }}
+            {{ $t(item.title) }}
             <b class="caret"></b>
           </span>
         </template>
         <template v-else>
           <i class="material-icons">{{ item.icon }}</i>
           <p>
-            {{ item.title }}
+            {{ $t(item.title) }}
             <b class="caret"></b>
           </p>
         </template>
@@ -73,7 +73,8 @@ export default {
       return _.kebabCase(this.item.path.name)
     },
     textIcon: function () {
-      return this.item.title
+      return this.$i18n
+        .t(this.item.title)
         .split(' ')
         .map(s => s.charAt(0).toUpperCase())
         .join('')

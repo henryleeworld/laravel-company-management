@@ -7,7 +7,10 @@
             <div class="card-icon">
               <i class="material-icons">remove_red_eye</i>
             </div>
-            <h4 class="card-title">View Category</h4>
+            <h4 class="card-title">
+              {{ $t('global.view') }}
+              <strong>{{ $t('cruds.category.title_singular') }}</strong>
+            </h4>
           </div>
           <div class="card-body">
             <back-button></back-button>
@@ -20,7 +23,7 @@
                     <tbody>
                       <tr>
                         <td class="text-primary">
-                          Name
+                          {{ $t('cruds.category.fields.name') }}
                         </td>
                         <td>
                           {{ entry.name }}

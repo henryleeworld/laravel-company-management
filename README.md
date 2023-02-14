@@ -34,8 +34,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/KrE6qoO.png)
+![](https://i.imgur.com/kHFKJH5.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/2ssvhTr.png)
+![](https://i.imgur.com/Lm2uUVs.png)
 > 管理公司登記，依縣市別及類別來區分

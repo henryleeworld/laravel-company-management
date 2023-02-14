@@ -6,6 +6,7 @@ import MaterialSpinner from '@components/MaterialSpinner.vue'
 import VueButtonSpinner from '@components/VueButtonSpinner.vue'
 import BootstrapAlert from '@components/BootstrapAlert.vue'
 import SideBar from '@components/SidebarPlugin'
+import LanguagesPlugin from '@components/LanguagesPlugin'
 import EventHub from '@components/EventHubPlugin'
 import BackButton from '@components/BackButton.vue'
 import DatetimePicker from '@components/DatetimePicker.vue'
@@ -16,6 +17,7 @@ const GlobalComponents = {
   install(Vue) {
     Vue.use(abilitiesPlugin, ability)
     Vue.use(SideBar)
+    Vue.use(LanguagesPlugin)
     Vue.use(EventHub)
     Vue.use(Datatable)
     Vue.use(VueSweetalert2)

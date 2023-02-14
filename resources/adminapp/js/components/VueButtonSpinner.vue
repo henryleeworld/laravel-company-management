@@ -4,7 +4,7 @@
       <i class="material-icons">{{ icon }}</i>
     </span>
     <i class="fa fa-circle-o-notch fa-spin" v-show="isLoading"></i>
-    Save
+    {{ $t('global.save') }}
   </button>
 </template>
 

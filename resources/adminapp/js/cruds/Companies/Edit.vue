@@ -8,7 +8,10 @@
               <div class="card-icon">
                 <i class="material-icons">edit</i>
               </div>
-              <h4 class="card-title">Edit Company</h4>
+              <h4 class="card-title">
+                {{ $t('global.edit') }}
+                <strong>{{ $t('cruds.company.title_singular') }}</strong>
+              </h4>
             </div>
             <div class="card-body">
               <back-button></back-button>
@@ -24,7 +27,9 @@
                       'is-focused': activeField == 'name'
                     }"
                   >
-                    <label class="bmd-label-floating required">Name</label>
+                    <label class="bmd-label-floating required">
+                        {{ $t('cruds.company.fields.name') }}
+                    </label>
                     <input
                       class="form-control"
                       type="text"
@@ -42,7 +47,9 @@
                       'is-focused': activeField == 'description'
                     }"
                   >
-                    <label class="bmd-label-floating">Description</label>
+                    <label class="bmd-label-floating">
+                        {{ $t('cruds.company.fields.description') }}
+                    </label>
                     <input
                       class="form-control"
                       type="text"
@@ -59,7 +66,9 @@
                       'is-focused': activeField == 'city'
                     }"
                   >
-                    <label class="bmd-label-floating">City</label>
+                    <label class="bmd-label-floating">
+                        {{ $t('cruds.company.fields.city') }}
+                    </label>
                     <v-select
                       name="city"
                       label="name"
@@ -79,7 +88,9 @@
                       'is-focused': activeField == 'categories'
                     }"
                   >
-                    <label class="bmd-label-floating">Categories</label>
+                    <label class="bmd-label-floating">
+                        {{ $t('cruds.company.fields.categories') }}
+                    </label>
                     <v-select
                       name="categories"
                       label="name"
@@ -94,7 +105,7 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label>Logo</label>
+                    <label>{{ $t('cruds.company.fields.logo') }}</label>
                     <attachment
                       :route="getRoute('companies')"
                       :collection-name="'company_logo'"
@@ -118,7 +129,7 @@
                 :isLoading="loading"
                 :disabled="loading"
               >
-                Save
+                {{ $t('global.save') }}
               </vue-button-spinner>
             </div>
           </div>

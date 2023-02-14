@@ -7,7 +7,10 @@
             <div class="card-icon">
               <i class="material-icons">assignment</i>
             </div>
-            <h4 class="card-title">Companies Table</h4>
+            <h4 class="card-title">
+              {{ $t('global.table') }}
+              <strong>{{ $t('cruds.company.title') }}</strong>
+            </h4>
           </div>
           <div class="card-body">
             <router-link
@@ -18,7 +21,7 @@
               <i class="material-icons">
                 add
               </i>
-              Add new
+              {{ $t('global.add') }}
             </router-link>
             <button
               type="button"
@@ -30,7 +33,7 @@
               <i class="material-icons" :class="{ 'fa-spin': loading }">
                 refresh
               </i>
-              Refresh
+              {{ $t('global.refresh') }}
             </button>
           </div>
           <div class="card-body">
@@ -49,8 +52,11 @@
                   :total="total"
                   :query="query"
                   :xprops="xprops"
+                  :HeaderSettings="false"
                   :pageSizeOptions="[10, 25, 50, 100]"
-                />
+                >
+                  <header-settings :columns="columns" class="pull-right" />
+                </datatable>
               </div>
             </div>
           </div>
@@ -63,6 +69,8 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import DatatableActions from '@components/Datatables/DatatableActions'
+import TranslatedHeader from '@components/Datatables/TranslatedHeader'
+import HeaderSettings from '@components/Datatables/HeaderSettings'
 import DatatableSingle from '@components/Datatables/DatatableSingle'
 import DatatableList from '@components/Datatables/DatatableList'
 import DatatableCheckbox from '@components/Datatables/DatatableCheckbox'
@@ -70,20 +78,25 @@ import DatatableEnum from '@components/Datatables/DatatableEnum'
 import DatatablePictures from '@components/Datatables/DatatablePictures'
 
 export default {
+  components: {
+    HeaderSettings
+  },
   data() {
     return {
       columns: [
-        { title: 'ID', field: 'id', sortable: true, colStyle: 'width: 50px;' },
-        { title: 'Name', field: 'name', sortable: true },
-        { title: 'City', field: 'city.name', tdComp: DatatableSingle },
+        { title: 'cruds.company.fields.id', field: 'id', thComp: TranslatedHeader, sortable: true, colStyle: 'width: 50px;' },
+        { title: 'cruds.company.fields.name', field: 'name', thComp: TranslatedHeader, sortable: true },
+        { title: 'cruds.company.fields.city', field: 'city.name', thComp: TranslatedHeader, tdComp: DatatableSingle },
         {
-          title: 'Categories',
+          title: 'cruds.company.fields.categories',
           field: 'categories.name',
+          thComp: TranslatedHeader,
           tdComp: DatatableList
         },
-        { title: 'Logo', field: 'logo', tdComp: DatatablePictures },
+        { title: 'cruds.company.fields.logo', field: 'logo', thComp: TranslatedHeader, tdComp: DatatablePictures },
         {
-          title: 'Actions',
+          title: 'global.actions',
+          thComp: TranslatedHeader,
           tdComp: DatatableActions,
           visible: true,
           thClass: 'text-right',

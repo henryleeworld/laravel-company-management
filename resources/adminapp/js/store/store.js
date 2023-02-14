@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import Alert from './modules/alert'
+import I18NStore from './modules/i18n'
 
 import PermissionsIndex from './cruds/Permissions'
 import PermissionsSingle from './cruds/Permissions/single'
@@ -23,6 +24,7 @@ const debug = process.env.NODE_ENV !== 'production'
 export default new Vuex.Store({
   modules: {
     Alert,
+    I18NStore,
     PermissionsIndex,
     PermissionsSingle,
     RolesIndex,

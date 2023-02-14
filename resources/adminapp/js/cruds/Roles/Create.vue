@@ -8,7 +8,10 @@
               <div class="card-icon">
                 <i class="material-icons">add</i>
               </div>
-              <h4 class="card-title">Create Role</h4>
+              <h4 class="card-title">
+                {{ $t('global.create') }}
+                <strong>{{ $t('cruds.role.title_singular') }}</strong>
+              </h4>
             </div>
             <div class="card-body">
               <back-button></back-button>
@@ -24,7 +27,9 @@
                       'is-focused': activeField == 'title'
                     }"
                   >
-                    <label class="bmd-label-floating required">Title</label>
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.role.fields.title')
+                    }}</label>
                     <input
                       class="form-control"
                       type="text"
@@ -42,9 +47,9 @@
                       'is-focused': activeField == 'permissions'
                     }"
                   >
-                    <label class="bmd-label-floating required"
-                      >Permissions</label
-                    >
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.role.fields.permissions')
+                    }}</label>
                     <v-select
                       name="permissions"
                       label="title"
@@ -68,7 +73,7 @@
                 :isLoading="loading"
                 :disabled="loading"
               >
-                Save
+                {{ $t('global.save') }}
               </vue-button-spinner>
             </div>
           </div>

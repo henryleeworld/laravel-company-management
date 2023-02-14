@@ -112,7 +112,11 @@ var render = function render() {
     staticClass: "col-md-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header card-header-primary card-header-icon"
+  }, [_vm._m(0), _vm._v(" "), _c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v("\n              " + _vm._s(_vm.$t("global.edit")) + "\n              "), _c("strong", [_vm._v(_vm._s(_vm.$t("cruds.company.title_singular")))])])]), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_c("back-button")], 1), _vm._v(" "), _c("div", {
     staticClass: "card-body"
@@ -128,7 +132,7 @@ var render = function render() {
     }
   }, [_c("label", {
     staticClass: "bmd-label-floating required"
-  }, [_vm._v("Name")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("\n                      " + _vm._s(_vm.$t("cruds.company.fields.name")) + "\n                  ")]), _vm._v(" "), _c("input", {
     staticClass: "form-control",
     attrs: {
       type: "text",
@@ -152,7 +156,7 @@ var render = function render() {
     }
   }, [_c("label", {
     staticClass: "bmd-label-floating"
-  }, [_vm._v("Description")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("\n                      " + _vm._s(_vm.$t("cruds.company.fields.description")) + "\n                  ")]), _vm._v(" "), _c("input", {
     staticClass: "form-control",
     attrs: {
       type: "text"
@@ -175,7 +179,7 @@ var render = function render() {
     }
   }, [_c("label", {
     staticClass: "bmd-label-floating"
-  }, [_vm._v("City")]), _vm._v(" "), _c("v-select", {
+  }, [_vm._v("\n                      " + _vm._s(_vm.$t("cruds.company.fields.city")) + "\n                  ")]), _vm._v(" "), _c("v-select", {
     key: "city-field",
     attrs: {
       name: "city",
@@ -204,7 +208,7 @@ var render = function render() {
     }
   }, [_c("label", {
     staticClass: "bmd-label-floating"
-  }, [_vm._v("Categories")]), _vm._v(" "), _c("v-select", {
+  }, [_vm._v("\n                      " + _vm._s(_vm.$t("cruds.company.fields.categories")) + "\n                  ")]), _vm._v(" "), _c("v-select", {
     key: "categories-field",
     attrs: {
       name: "categories",
@@ -226,7 +230,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c("div", {
     staticClass: "form-group"
-  }, [_c("label", [_vm._v("Logo")]), _vm._v(" "), _c("attachment", {
+  }, [_c("label", [_vm._v(_vm._s(_vm.$t("cruds.company.fields.logo")))]), _vm._v(" "), _c("attachment", {
     attrs: {
       route: _vm.getRoute("companies"),
       "collection-name": "company_logo",
@@ -250,20 +254,16 @@ var render = function render() {
       isLoading: _vm.loading,
       disabled: _vm.loading
     }
-  }, [_vm._v("\n              Save\n            ")])], 1)])])])])]);
+  }, [_vm._v("\n              " + _vm._s(_vm.$t("global.save")) + "\n            ")])], 1)])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "card-header card-header-primary card-header-icon"
-  }, [_c("div", {
     staticClass: "card-icon"
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("edit")])]), _vm._v(" "), _c("h4", {
-    staticClass: "card-title"
-  }, [_vm._v("Edit Company")])]);
+  }, [_vm._v("edit")])]);
 }];
 render._withStripped = true;
 

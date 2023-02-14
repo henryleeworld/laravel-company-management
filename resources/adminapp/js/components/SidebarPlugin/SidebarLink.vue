@@ -11,11 +11,11 @@
       <a :href="href" class="nav-link" @click="navigate">
         <template v-if="text">
           <span class="sidebar-mini">{{ textIcon }}</span>
-          <span class="sidebar-normal">{{ item.title }}</span>
+          <span class="sidebar-normal">{{ $t(item.title) }}</span>
         </template>
         <template v-else>
           <i class="material-icons">{{ item.icon }}</i>
-          <p>{{ item.title }}</p>
+          <p>{{ $t(item.title) }}</p>
         </template>
       </a>
     </li>
@@ -41,7 +41,8 @@ export default {
   },
   computed: {
     textIcon: function () {
-      return this.item.title
+      return this.$i18n
+        .t(this.item.title)
         .split(' ')
         .map(s => s.charAt(0).toUpperCase())
         .join('')

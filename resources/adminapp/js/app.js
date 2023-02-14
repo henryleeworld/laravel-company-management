@@ -17,12 +17,14 @@ import App from './App.vue'
 // Router
 import router from './routes/routes'
 import store from './store/store'
+import i18n from './i18n'
 
 // Plugins
 
 import GlobalComponents from './globalComponents'
 import GlobalDirectives from './globalDirectives'
 import GlobalMixins from './mixins/global'
+import { mapGetters, mapActions } from 'vuex'
 
 Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
@@ -38,5 +40,12 @@ const app = new Vue({
   el: '#app',
   render: h => h(App),
   router,
-  store
+  store,
+  i18n,
+  created() {
+    this.fetchLanguages()
+  },
+  methods: {
+    ...mapActions('I18NStore', ['fetchLanguages'])
+  }
 })

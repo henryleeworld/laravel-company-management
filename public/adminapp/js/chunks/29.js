@@ -31,11 +31,6 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("div", {
     staticClass: "container-fluid"
   }, [_c("div", {
@@ -48,15 +43,20 @@ var staticRenderFns = [function () {
     staticClass: "card"
   }, [_c("div", {
     staticClass: "card-header card-header-success card-header-icon"
-  }, [_c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v(_vm._s(_vm.$t("global.hello")))])]), _vm._v(" "), _c("div", {
+    staticClass: "card-body"
+  }, [_vm._v("\n            " + _vm._s(_vm.$t("global.youAreLoggedIn")) + "\n          ")])])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "card-icon"
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("language")])]), _vm._v(" "), _c("h4", {
-    staticClass: "card-title"
-  }, [_vm._v("Hello")])]), _vm._v(" "), _c("div", {
-    staticClass: "card-body"
-  }, [_vm._v("\n            You are logged in!\n          ")])])])])])]);
+  }, [_vm._v("language")])]);
 }];
 render._withStripped = true;
 

@@ -8,7 +8,10 @@
               <div class="card-icon">
                 <i class="material-icons">add</i>
               </div>
-              <h4 class="card-title">Create Category</h4>
+              <h4 class="card-title">
+                {{ $t('global.create') }}
+                <strong>{{ $t('cruds.category.title_singular') }}</strong>
+              </h4>
             </div>
             <div class="card-body">
               <back-button></back-button>
@@ -24,7 +27,9 @@
                       'is-focused': activeField == 'name'
                     }"
                   >
-                    <label class="bmd-label-floating required">Name</label>
+                    <label class="bmd-label-floating required">
+                        {{ $t('cruds.category.fields.name') }}
+                    </label>
                     <input
                       class="form-control"
                       type="text"
@@ -45,7 +50,7 @@
                 :isLoading="loading"
                 :disabled="loading"
               >
-                Save
+                {{ $t('global.save') }}
               </vue-button-spinner>
             </div>
           </div>

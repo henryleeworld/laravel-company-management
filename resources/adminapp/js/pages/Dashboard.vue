@@ -8,10 +8,10 @@
               <div class="card-icon">
                 <i class="material-icons">language</i>
               </div>
-              <h4 class="card-title">Hello</h4>
+              <h4 class="card-title">{{ $t('global.hello') }}</h4>
             </div>
             <div class="card-body">
-              You are logged in!
+              {{ $t('global.youAreLoggedIn') }}
             </div>
           </div>
         </div>

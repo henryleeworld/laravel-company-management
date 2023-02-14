@@ -8,7 +8,10 @@
               <div class="card-icon">
                 <i class="material-icons">add</i>
               </div>
-              <h4 class="card-title">Create User</h4>
+              <h4 class="card-title">
+                {{ $t('global.create') }}
+                <strong>{{ $t('cruds.user.title_singular') }}</strong>
+              </h4>
             </div>
             <div class="card-body">
               <back-button></back-button>
@@ -24,7 +27,9 @@
                       'is-focused': activeField == 'name'
                     }"
                   >
-                    <label class="bmd-label-floating required">Name</label>
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.user.fields.name')
+                    }}</label>
                     <input
                       class="form-control"
                       type="text"
@@ -42,7 +47,9 @@
                       'is-focused': activeField == 'email'
                     }"
                   >
-                    <label class="bmd-label-floating required">Email</label>
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.user.fields.email')
+                    }}</label>
                     <input
                       class="form-control"
                       type="email"
@@ -60,7 +67,9 @@
                       'is-focused': activeField == 'password'
                     }"
                   >
-                    <label class="bmd-label-floating required">Password</label>
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.user.fields.password')
+                    }}</label>
                     <input
                       class="form-control"
                       type="password"
@@ -77,7 +86,9 @@
                       'is-focused': activeField == 'roles'
                     }"
                   >
-                    <label class="bmd-label-floating required">Roles</label>
+                    <label class="bmd-label-floating required">{{
+                      $t('cruds.user.fields.roles')
+                    }}</label>
                     <v-select
                       name="roles"
                       label="title"
@@ -101,7 +112,7 @@
                 :isLoading="loading"
                 :disabled="loading"
               >
-                Save
+                {{ $t('global.save') }}
               </vue-button-spinner>
             </div>
           </div>

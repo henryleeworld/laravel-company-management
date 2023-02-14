@@ -95,7 +95,11 @@ var render = function render() {
     staticClass: "col-md-12"
   }, [_c("div", {
     staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "card-header card-header-primary card-header-icon"
+  }, [_vm._m(0), _vm._v(" "), _c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v("\n              " + _vm._s(_vm.$t("global.edit")) + "\n              "), _c("strong", [_vm._v(_vm._s(_vm.$t("cruds.city.title_singular")))])])]), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_c("back-button")], 1), _vm._v(" "), _c("div", {
     staticClass: "card-body"
@@ -111,7 +115,7 @@ var render = function render() {
     }
   }, [_c("label", {
     staticClass: "bmd-label-floating required"
-  }, [_vm._v("Name")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("\n                      " + _vm._s(_vm.$t("cruds.city.fields.name")) + "\n                  ")]), _vm._v(" "), _c("input", {
     staticClass: "form-control",
     attrs: {
       type: "text",
@@ -136,20 +140,16 @@ var render = function render() {
       isLoading: _vm.loading,
       disabled: _vm.loading
     }
-  }, [_vm._v("\n              Save\n            ")])], 1)])])])])]);
+  }, [_vm._v("\n              " + _vm._s(_vm.$t("global.save")) + "\n            ")])], 1)])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "card-header card-header-primary card-header-icon"
-  }, [_c("div", {
     staticClass: "card-icon"
   }, [_c("i", {
     staticClass: "material-icons"
-  }, [_vm._v("edit")])]), _vm._v(" "), _c("h4", {
-    staticClass: "card-title"
-  }, [_vm._v("Edit City")])]);
+  }, [_vm._v("edit")])]);
 }];
 render._withStripped = true;
 

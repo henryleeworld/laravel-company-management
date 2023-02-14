@@ -54,7 +54,7 @@
                                     <label class="form-check-label">
                                         <input type="checkbox" name="remember" class="form-check-input">
                                         <span class="form-check-sign"><span class="check"></span></span>
-                                        Remember me
+                                        {{ trans('global.remember_me') }}
                                     </label>
                                 </div>
                             </div>
